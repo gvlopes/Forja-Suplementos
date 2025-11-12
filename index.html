@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forja Suplementos - Loja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Forja Suplementos</h1>
+      <p>Forjando resultados.</p>
+    </div>
+    <div>
+      <button id="verCarrinho" class="btn">🛒 Carrinho (<span id="qtdItens">0</span>)</button>
+      <a class="btn" href="admin.html" target="_blank">Admin</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Suplementos para quem treina sério</h2>
+      <p>Promoções semanais — confira as categorias abaixo</p>
+    </div>
+  </section>
+
+  <section class="filtros">
+    <label>Categoria:
+      <select id="filtroCategoria">
+        <option value="all">Todas</option>
+      </select>
+    </label>
+    <input id="buscar" placeholder="Buscar produto..." />
+  </section>
+
+  <main id="produtos" class="grid"></main>
+
+  <div id="carrinhoModal" class="modal">
+    <div class="modal-content">
+      <h2>Seu carrinho</h2>
+      <ul id="listaCarrinho"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0,00</span></p>
+      <label>Nome do cliente (opcional)<br><input id="clienteNome" placeholder="Ex: João Silva"></label>
+      <label>Endereço/Observações<br><input id="observacoes" placeholder="Ex: Retirar em loja"></label>
+      <div class="actions">
+        <button id="enviarWhatsapp" class="btn primary">Finalizar pelo WhatsApp</button>
+        <button id="fecharCarrinho" class="btn">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <img src="assets/forja_logo.svg" alt="Forja Suplementos" class="footer-logo">
+    <p>Desenvolvido para Forja Suplementos — envie pedidos direto pelo WhatsApp.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

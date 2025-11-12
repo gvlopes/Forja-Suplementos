@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Forja Suplementos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main style="max-width:1000px;margin:20px auto;padding:12px;">
+    <h1>Painel Administrativo - Forja Suplementos</h1>
+
+    <div id="loginCard" class="card" style="max-width:420px;">
+      <h3>Acessar painel</h3>
+      <input id="senha" placeholder="Senha de acesso" style="width:100%;padding:8px;border-radius:8px;margin-bottom:8px" />
+      <div style="display:flex;gap:8px;">
+        <button class="btn" onclick="login()">Entrar</button>
+        <a href="index.html" class="btn">Voltar à loja</a>
+      </div>
+    </div>
+
+    <div id="painel" style="display:none;margin-top:16px;">
+      <section class="card">
+        <h2>Categorias</h2>
+        <div style="display:flex;gap:8px;margin-bottom:10px;">
+          <input id="novaCategoria" placeholder="Nova categoria" />
+          <button class="btn" onclick="addCategoria()">Adicionar</button>
+        </div>
+        <ul id="listaCategorias"></ul>
+      </section>
+
+      <section class="card" style="margin-top:12px;">
+        <h2>Produtos</h2>
+        <div style="display:grid;grid-template-columns:1fr 140px;gap:8px;">
+          <input id="nome" placeholder="Nome do produto" />
+          <input id="preco" placeholder="Preço (ex: 99.90)" type="number" step="0.01" />
+          <input id="img" placeholder="URL da imagem (ou deixe em branco)" />
+          <select id="categoriaSelect"></select>
+        </div>
+        <div style="margin-top:8px;">
+          <button class="btn" onclick="addProduto()">Adicionar Produto</button>
+          <button class="btn" onclick="importar()">Importar produtos.json</button>
+          <button class="btn" onclick="exportar()">Download produtos.json</button>
+        </div>
+        <ul id="listaProdutos"></ul>
+        <div style="margin-top:12px;display:flex;gap:8px;align-items:center;">
+          <button class="btn primary" onclick="salvarAlteracoes()">💾 Salvar alterações (atualiza loja)</button>
+          <span style="color:var(--muted);font-size:13px;">As alterações também são salvas no localStorage e aparecem na loja imediatamente.</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

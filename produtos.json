@@ -1,0 +1,38 @@
+{
+  "categorias": [
+    "Whey Protein",
+    "Creatina",
+    "BCAA",
+    "Pré-Treino"
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Whey Protein - Sabor Baunilha",
+      "categoria": "Whey Protein",
+      "preco": 99.9,
+      "img": "https://via.placeholder.com/600x450?text=Whey+Baunilha"
+    },
+    {
+      "id": 2,
+      "nome": "Creatina Monohidratada 300g",
+      "categoria": "Creatina",
+      "preco": 79.9,
+      "img": "https://via.placeholder.com/600x450?text=Creatina"
+    },
+    {
+      "id": 3,
+      "nome": "BCAA 2:1:1 120caps",
+      "categoria": "BCAA",
+      "preco": 59.9,
+      "img": "https://via.placeholder.com/600x450?text=BCAA"
+    },
+    {
+      "id": 4,
+      "nome": "Pré-Treino Energia 200g",
+      "categoria": "Pré-Treino",
+      "preco": 89.9,
+      "img": "https://via.placeholder.com/600x450?text=Pre-Treino"
+    }
+  ]
+}
